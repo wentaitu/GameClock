@@ -6,7 +6,7 @@
   android:padding="20dp">
 
     <EditText android:id="@+id/name_label"
-      android:singleLine="true"
+      android:maxLines="1"
       android:inputType="textCapSentences"
       android:hint="@string/label"
       android:layout_width="fill_parent"

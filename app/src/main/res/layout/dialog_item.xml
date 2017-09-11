@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- http://android.git.kernel.org/?p=platform/frameworks/base.git;a=blob;f=core/res/res/layout/select_dialog_item.xml;h=60a74a42de4c9798969b41b739f1397643c789da;hb=HEAD -->
 <TextView
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="fill_parent"

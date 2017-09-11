@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.github.triplet.play'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
 
     defaultConfig {
-        applicationId "io.github.carlorodriguez.alarmon"
+        applicationId "cn.edu.cqupt.gameclock"
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 26
     }
 
     signingConfigs {
@@ -34,14 +34,18 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile 'com.android.support:design:26.0.0-alpha1'
     compile 'org.apache.commons:commons-lang3:3.4'
-    compile 'com.android.support:preference-v7:23.1.1'
+    compile 'com.android.support:preference-v7:26.0.0-alpha1'
     compile project(':library')
+    compile project(':StormPlane')
     compile 'fr.baloomba:viewpagerindicator:2.4.2'
-    compile 'com.android.support:cardview-v7:23.1.1'
+    compile 'com.android.support:cardview-v7:26.0.0-alpha1'
     compile 'com.github.iammert:MaterialIntroView:1.5.2'
+    compile 'com.github.bumptech.glide:glide:4.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
 }
 
 play {

@@ -7,50 +7,56 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-  <android.support.design.widget.AppBarLayout
-      android:id="@+id/app_bar"
-      android:layout_width="match_parent"
-      android:layout_height="@dimen/app_bar_height"
-      android:fitsSystemWindows="true"
-      android:theme="?attr/customAppBarOverlay"
-      >
-
-    <android.support.design.widget.CollapsingToolbarLayout
-        android:id="@+id/toolbar_layout"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/app_bar_height"
         android:fitsSystemWindows="true"
-        app:contentScrim="?attr/colorPrimary"
-        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+        android:theme="?attr/customAppBarOverlay">
 
-      <android.support.v7.widget.Toolbar
-          android:id="@+id/toolbar"
+      <android.support.design.widget.CollapsingToolbarLayout
+          android:id="@+id/toolbar_layout"
           android:layout_width="match_parent"
-          android:layout_height="?attr/actionBarSize"
-          app:layout_collapseMode="pin"
-          app:popupTheme="?attr/customPopupOverlay"/>
+          android:layout_height="match_parent"
+          android:fitsSystemWindows="true"
+          app:contentScrim="?attr/colorPrimary"
+          app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-    </android.support.design.widget.CollapsingToolbarLayout>
-  </android.support.design.widget.AppBarLayout>
+          <ImageView
+              android:id="@+id/head_back"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:scaleType="centerCrop"
+              app:layout_collapseMode="parallax"
+              app:layout_collapseParallaxMultiplier="0.5"
+              android:fitsSystemWindows="true"/>
 
-  <android.support.design.widget.FloatingActionButton
-      android:id="@+id/add_fab"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_margin="@dimen/fab_margin"
-      android:src="?attr/customAddIcon"
-      app:layout_anchor="@id/app_bar"
-      app:layout_anchorGravity="bottom|end"
-      />
+          <android.support.v7.widget.Toolbar
+              android:id="@+id/toolbar"
+              android:layout_width="match_parent"
+              android:layout_height="?attr/actionBarSize"
+              app:layout_collapseMode="pin"
+              app:popupTheme="?attr/customPopupOverlay"/>
 
-  <include layout="@layout/content_main" />
+      </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="?attr/customAddIcon"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end" />
+
+    <include layout="@layout/content_main" />
 
     <RelativeLayout
         android:id="@+id/empty_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
-        >
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/no_alarms_image"
@@ -59,8 +65,7 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_no_alarms"
-            />
+            android:src="@drawable/ic_no_alarms" />
 
     </RelativeLayout>
 

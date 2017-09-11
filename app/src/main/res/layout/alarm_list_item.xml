@@ -7,8 +7,7 @@
     card_view:cardCornerRadius="4dp"
     card_view:cardBackgroundColor="?attr/customCardBackgroundColor"
     android:layout_margin="5dp"
-    android:foreground="?android:selectableItemBackground"
-    >
+    android:foreground="?android:selectableItemBackground">
 
   <LinearLayout
       android:layout_width="match_parent"
@@ -28,45 +27,45 @@
                   android:layout_height="wrap_content">
 
       <LinearLayout android:focusable="false"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
         <TextView android:id="@+id/alarm_time"
                   android:focusable="false"
                   android:gravity="top|start"
-                  android:singleLine="true"
+                  android:maxLines="1"
                   android:layout_weight="1"
                   android:textSize="24sp"
                   android:layout_width="0dp"
-                  android:layout_height="fill_parent" />
+                  android:layout_height="match_parent" />
 
         <TextView android:id="@+id/alarm_label"
                   android:focusable="false"
                   android:gravity="top|end"
-                  android:singleLine="true"
+                  android:maxLines="1"
                   android:textSize="20sp"
                   android:maxEms="6"
                   android:layout_width="wrap_content"
-                  android:layout_height="fill_parent" />
+                  android:layout_height="match_parent" />
       </LinearLayout>
 
       <LinearLayout android:focusable="false"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
         <TextView android:id="@+id/next_alarm"
                   android:focusable="false"
                   android:gravity="top|start"
-                  android:singleLine="true"
+                  android:maxLines="1"
                   android:layout_weight="1"
                   android:textStyle="italic"
                   android:layout_width="0dp"
-                  android:layout_height="fill_parent" />
+                  android:layout_height="match_parent" />
 
         <TextView android:id="@+id/alarm_repeat"
                   android:focusable="false"
                   android:gravity="top|end"
-                  android:singleLine="true"
+                  android:maxLines="1"
                   android:layout_width="wrap_content"
-                  android:layout_height="fill_parent" />
+                  android:layout_height="match_parent" />
       </LinearLayout>
     </LinearLayout>
 
@@ -75,7 +74,7 @@
         android:focusable="false"
         android:gravity="center_vertical"
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent" />
+        android:layout_height="match_parent" />
 
   </LinearLayout>
 

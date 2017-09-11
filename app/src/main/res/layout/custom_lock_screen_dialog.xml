@@ -13,7 +13,7 @@
   <EditText android:id="@+id/custom_lock_screen_text"
     android:lines="3"
     android:inputType="text"
-    android:singleLine="false"
+    android:maxLines="1"
     android:gravity="top"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" />

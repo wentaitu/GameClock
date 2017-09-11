@@ -10,7 +10,7 @@
     android:paddingBottom="25dp"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" />
-  <io.github.carlorodriguez.alarmon.TimeEditText
+  <cn.edu.cqupt.gameclock.TimeEditText
     android:id="@+id/time_value"
     android:textSize="24sp"
     android:gravity="center"

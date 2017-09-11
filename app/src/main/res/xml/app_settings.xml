@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-  <CheckBoxPreference android:persistent="true"
-    android:key="NOTIFICATION_ICON"
-    android:title="@string/notification_icon_title"
-    android:summaryOn="@string/notification_icon_on"
-    android:summaryOff="@string/notification_icon_off"
-    android:defaultValue="true" />
 
-    <ListPreference
-        android:persistent="true"
-        android:key="NOTIFICATION_TEXT"
-        android:title="@string/notification_text_title"
-        android:dialogTitle="@string/notification_text_title"
-        android:summary="@string/notification_text_summary"
-        android:entries="@array/notification_text_types"
-        android:entryValues="@array/notification_text_values"
-        android:defaultValue="2" />
+  <CheckBoxPreference
+      android:persistent="true"
+      android:key="NOTIFICATION_ICON"
+      android:title="@string/notification_icon_title"
+      android:summaryOn="@string/notification_icon_on"
+      android:summaryOff="@string/notification_icon_off"
+      android:defaultValue="true" />
+
+  <ListPreference
+      android:persistent="true"
+      android:key="NOTIFICATION_TEXT"
+      android:title="@string/notification_text_title"
+      android:dialogTitle="@string/notification_text_title"
+      android:summary="@string/notification_text_summary"
+      android:entries="@array/notification_text_types"
+      android:entryValues="@array/notification_text_values"
+      android:defaultValue="2" />
+
+  <ListPreference
+      android:persistent="true"
+      android:key="LOCK_SCREEN"
+      android:title="@string/lock_screen_title"
+      android:dialogTitle="@string/lock_screen_title"
+      android:summary="@string/lock_screen_summary"
+      android:entries="@array/lock_screen_types"
+      android:entryValues="@array/lock_screen_values"
+      android:defaultValue="lock_screen_countdown" />
 
   <ListPreference android:persistent="true"
-    android:key="LOCK_SCREEN"
-    android:title="@string/lock_screen_title"
-    android:dialogTitle="@string/lock_screen_title"
-    android:summary="@string/lock_screen_summary"
-    android:entries="@array/lock_screen_types"
-    android:entryValues="@array/lock_screen_values"
-    android:defaultValue="lock_screen_countdown" />
-
-  <ListPreference android:persistent="true"
-    android:key="ALARM_TIMEOUT"
-    android:title="@string/time_out_title"
-    android:dialogTitle="@string/time_out_title"
-    android:summary="@string/time_out_summary"
-    android:entries="@array/time_out_types"
-    android:entryValues="@array/time_out_values"
-    android:defaultValue="10" />
+      android:key="ALARM_TIMEOUT"
+      android:title="@string/time_out_title"
+      android:dialogTitle="@string/time_out_title"
+      android:summary="@string/time_out_summary"
+      android:entries="@array/time_out_types"
+      android:entryValues="@array/time_out_values"
+      android:defaultValue="10" />
 
   <ListPreference
       android:persistent="true"
@@ -43,10 +46,7 @@
       android:summary="@string/app_theme_summary"
       android:entries="@array/app_themes"
       android:entryValues="@array/app_themes_values"
-      android:defaultValue="0"
-      >
-
-  </ListPreference>
+      android:defaultValue="0"/>
 
   <ListPreference
       android:persistent="true"
@@ -58,18 +58,9 @@
       android:entryValues="@array/time_picker_color_values"
       android:defaultValue="teal" />
 
-    <Preference
-        android:persistent="false"
-        android:key="@string/settings_about_key"
-        android:title="@string/about"
-        />
+  <Preference
+      android:persistent="false"
+      android:key="@string/settings_about_key"
+      android:title="@string/about" />
 
-  <ListPreference android:persistent="true"
-    android:key="DEBUG_MODE"
-    android:title="@string/debug_mode_title"
-    android:dialogTitle="@string/debug_mode_title"
-    android:summary="@string/debug_mode_summary"
-    android:entries="@array/debug_types"
-    android:entryValues="@array/debug_values"
-    android:defaultValue="debug_default" />
 </PreferenceScreen>

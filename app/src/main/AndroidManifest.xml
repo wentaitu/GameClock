@@ -1,71 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="io.github.carlorodriguez.alarmon"
+<manifest package="cn.edu.cqupt.gameclock"
           xmlns:android="http://schemas.android.com/apk/res/android"
           android:versionName="1.2.0" android:versionCode="4">
 
+  <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.WAKE_LOCK"/>
   <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
   <uses-permission android:name="android.permission.VIBRATE"/>
   <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-  <!-- This is for debug releases only! -->
-  <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission> -->
-
-  <!-- android:debugable for debug release only! -->
-  <!-- <application android:icon="@drawable/alarmclock" android:label="@string/app_name" android:debuggable="true"> -->
 
   <application
       android:allowBackup="true"
       android:icon="@mipmap/ic_launcher"
       android:label="@string/app_name">
+
     <activity
-        android:name="io.github.carlorodriguez.alarmon.ActivityAlarmClock"
+        android:name="cn.edu.cqupt.gameclock.activity.AlarmClockActivity"
         android:theme="@style/MainAppThemeDark"
-        android:launchMode="singleTask">
+        android:launchMode="singleTask"
+        android:screenOrientation="portrait">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
+
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
-    <activity
-        android:name="io.github.carlorodriguez.alarmon.ActivityAlarmNotification"
-        android:theme="@style/Theme.AppCompat.NoActionBar"
-        android:launchMode="singleInstance"
-        android:screenOrientation="portrait"/>
-    <activity
-        android:name="io.github.carlorodriguez.alarmon.ActivityAlarmSettings"
+
+      <activity
+        android:name="cn.edu.cqupt.gameclock.activity.AlarmSettingsActivity"
         android:theme="@style/AppThemeDark"
         android:finishOnTaskLaunch="true"/>
     <activity
-        android:name="io.github.carlorodriguez.alarmon.ActivityAppSettings"
+        android:name="cn.edu.cqupt.gameclock.AppSettingsActivity"
         android:theme="@style/AppThemeDark"
         android:finishOnTaskLaunch="true"/>
     <activity
-        android:name="io.github.carlorodriguez.alarmon.ActivityPendingAlarms"
-        android:theme="@style/AppThemeDark"
-        android:finishOnTaskLaunch="true"/>
-    <activity
-        android:name=".AboutTabbedActivity"
+        android:name="cn.edu.cqupt.gameclock.activity.AboutActivity"
         android:theme="@style/AppThemeDark">
     </activity>
-    <service android:name="io.github.carlorodriguez.alarmon.AlarmClockService"/>
-    <service android:name="io.github.carlorodriguez.alarmon.NotificationService"/>
-    <receiver android:name="io.github.carlorodriguez.alarmon.ReceiverAlarm"/>
-    <receiver android:name="io.github.carlorodriguez.alarmon.ReceiverNotificationRefresh"/>
-    <receiver android:name="io.github.carlorodriguez.alarmon.ReceiverDeviceBoot">
+
+    <service android:name="cn.edu.cqupt.gameclock.service.AlarmClockService"/>
+
+    <service android:name="cn.edu.cqupt.gameclock.service.NotificationService"/>
+
+    <receiver android:name="cn.edu.cqupt.gameclock.ReceiverAlarm"/>
+
+    <receiver android:name="cn.edu.cqupt.gameclock.ReceiverNotificationRefresh"/>
+
+    <receiver android:name="cn.edu.cqupt.gameclock.ReceiverDeviceBoot">
       <intent-filter>
         <action android:name="android.intent.action.BOOT_COMPLETED"/>
       </intent-filter>
+
       <intent-filter>
         <action android:name="android.intent.action.PACKAGE_REPLACED" />
         <data android:scheme="package" />
       </intent-filter>
     </receiver>
-    <receiver android:name="io.github.carlorodriguez.alarmon.RecevierTimeZoneChange">
+
+    <receiver android:name="cn.edu.cqupt.gameclock.RecevierTimeZoneChange">
       <intent-filter>
         <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
       </intent-filter>
     </receiver>
+
   </application>
 
 </manifest>
