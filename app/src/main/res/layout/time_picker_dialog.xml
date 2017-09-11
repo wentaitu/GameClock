@@ -7,7 +7,7 @@
   <LinearLayout android:orientation="horizontal"
     android:gravity="top|center_horizontal"
     android:layout_marginTop="10dp"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <ViewStub android:id="@+id/picker_hour"
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content" />
       <Button android:id="@+id/picker_am_pm"
         android:textSize="20sp"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     </LinearLayout>
   </LinearLayout>
@@ -54,6 +54,6 @@
     android:layout_weight="1"
     android:textStyle="italic"
     android:gravity="center"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="0dp" />
 </LinearLayout>

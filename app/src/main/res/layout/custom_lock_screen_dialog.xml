@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:orientation="vertical"
-  android:layout_width="fill_parent"
+  android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:padding="15dp" >
 
@@ -15,11 +15,11 @@
     android:inputType="text"
     android:maxLines="1"
     android:gravity="top"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content" />
 
   <CheckBox android:text="@string/custom_lock_screen_persistent"
     android:id="@+id/custom_lock_screen_persistent"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content" />
 </LinearLayout>

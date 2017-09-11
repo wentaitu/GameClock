@@ -38,9 +38,6 @@ public final class AlarmUtil {
   }
 
   public static Uri getDefaultAlarmUri() {
-    // DEFAULT_ALARM_ALERT_URI is only available after SDK version 5.
-    // Fall back to the default notification if the default alarm is
-    // unavailable.
     try {
       Field f = Settings.System.class.getField("DEFAULT_ALARM_ALERT_URI");
       return (Uri) f.get(null);

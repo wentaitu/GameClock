@@ -82,10 +82,10 @@
   <string name="songs">歌曲</string>
   <string name="selected">选择: </string>
   <string name="custom_lock_screen_text">定制锁屏信息</string>
-  <string name="custom_lock_screen_description" formatted="false">This is the text that will display on the lock screen.  In your text, you may use the string %c to display the count down time and/or the string %t to display the alarm time.\nExample: Hello %t\nWould appear as: Hello 8:00 am\nIf the \'Persistent\' box is checked.  The string will remain on the lock screen even when no alarm is scheduled.</string>
+  <string name="custom_lock_screen_description" formatted="false">锁屏描述</string>
   <string name="custom_lock_screen_persistent">Persistent</string>
   <string name="time_out_title">闹钟解除</string>
-  <string name="time_out_error">WARNING: This alarm has timed out waiting for an acknowledgment.</string>
+  <string name="time_out_error">异常</string>
   <string name="time_out_summary">调节闹钟持续响铃时间</string>
   <string name="pending_alarms">已开启闹钟</string>
   <string name="test_alarm">测试</string>
@@ -103,7 +103,7 @@
   <string name="notification_text_title">通知文字</string>
   <string name="notification_text_summary">配置闹钟信息展示在通知里</string>
   <string name="custom_notification_text">定制通知提示</string>
-  <string name="custom_notification_text_description" formatted="false">This is the text that will display on the notification. In your text, you may use the string ${c} to display the count down time and/or the string ${t} to display the alarm time.\nExample: Hello ${t}\nWould appear as: Hello 8:00 AM</string>
+  <string name="custom_notification_text_description" formatted="false">Hello</string>
   <string name="time_picker_color_title">时钟颜色调节</string>
   <string name="time_picker_color_summary">调解时间爱选择对话框颜色</string>
   <string name="red">Red</string>
@@ -123,7 +123,6 @@
   <string name="grey">Grey</string>
   <string name="blue_grey">Blue Grey</string>
   <string name="about">关于</string>
-  <string name="settings_about_key">io.github.carlorodriguez.alarmon.ABOUT</string>
   <string name="selected_media">&#160;%1$s</string>
   <string name="volume_start_label">开始音量: %1$d%%</string>
   <string name="volume_end_label">结束音量: %1$d%%</string>
@@ -132,8 +131,8 @@
   <string name="please_wait">请等待</string>
   <string name="alarm_deleted">闹钟已删除</string>
   <string name="undo">撤销</string>
-  <string name="swipe_right_to_delete">Hi There! Swipe right this card and see what happens.</string>
-  <string name="material_intro_id_alarm_deletion">material_intro_id_119.104</string>
+  <string name="swipe_right_to_delete">滑动试试</string>
+  <string name="material_intro_id_alarm_deletion">intro_id</string>
   <string name="version">V1.0.1</string>
   <string name="contact">contact:wentaitu@gmail.com</string>
 </resources>

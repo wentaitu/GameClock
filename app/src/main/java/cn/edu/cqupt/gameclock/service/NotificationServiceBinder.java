@@ -28,7 +28,7 @@ public class NotificationServiceBinder {
   public void bind() {
     final Intent serviceIntent = new Intent(context, NotificationService.class);
     if (!context.bindService(serviceIntent, serviceConnection, Context.BIND_AUTO_CREATE)) {
-      throw new IllegalStateException("Unable to bind to NotificationService.");
+      throw new IllegalStateException("Error!");
     }
   }
 

@@ -15,11 +15,4 @@
       app:showAsAction="never"
       />
 
-  <!--<item-->
-      <!--android:id="@+id/action_app_settings"-->
-      <!--android:title="@string/app_settings"-->
-      <!--android:orderInCategory="4"-->
-      <!--app:showAsAction="never"-->
-      <!--/>-->
-
 </menu>

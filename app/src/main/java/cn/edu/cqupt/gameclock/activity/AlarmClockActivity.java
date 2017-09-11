@@ -328,10 +328,6 @@ public final class AlarmClockActivity extends AppCompatActivity
                 alarm_settings.putExtra(AlarmSettingsActivity.EXTRAS_ALARM_ID, AlarmSettings.DEFAULT_SETTINGS_ID);
                 startActivity(alarm_settings);
                 break;
-//            case R.id.action_app_settings:
-//                Intent app_settings = new Intent(getApplicationContext(), AppSettingsActivity.class);
-//                startActivity(app_settings);
-//                break;
         }
 
         return super.onOptionsItemSelected(item);

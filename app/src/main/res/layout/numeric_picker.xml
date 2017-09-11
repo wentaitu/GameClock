@@ -8,7 +8,7 @@
     android:textSize="20sp"
     android:paddingTop="25dp"
     android:paddingBottom="25dp"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content" />
   <cn.edu.cqupt.gameclock.TimeEditText
     android:id="@+id/time_value"
@@ -16,17 +16,17 @@
     android:gravity="center"
     android:maxLength="2"
     android:inputType="number"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content" />
   <Button android:id="@+id/time_minus"
     android:textSize="20sp"
     android:paddingTop="25dp"
     android:paddingBottom="25dp"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content" />
   <Button android:id="@+id/time_increment"
     android:visibility="gone"
 	android:layout_marginTop="15dp"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content" />
 </LinearLayout>

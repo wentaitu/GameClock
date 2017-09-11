@@ -2,7 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="15dp" >
 
@@ -10,7 +10,7 @@
         android:id="@+id/setting_name"
         android:textSize="16sp"
         android:textColor="?attr/customSettingsItemTitle"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <android.support.v7.widget.SwitchCompat

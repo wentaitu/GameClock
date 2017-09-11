@@ -42,7 +42,7 @@ public class PrefsFragment extends PreferenceFragmentCompat
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.app_settings);
+
 
         getActivity().setTitle(R.string.app_settings);
 
@@ -91,14 +91,13 @@ public class PrefsFragment extends PreferenceFragmentCompat
         findPreference(AppSettings.NOTIFICATION_TEXT).
                 setOnPreferenceChangeListener(this);
 
-        findPreference(getString(R.string.settings_about_key)).
+        findPreference("tuwentai").
                 setOnPreferenceClickListener(this);
     }
 
     @Override
     public boolean onPreferenceClick(Preference preference) {
-        if (preference.getKey().equalsIgnoreCase(getString(
-                R.string.settings_about_key))) {
+        if (preference.getKey().equalsIgnoreCase("tuwentai")) {
             startActivity(new Intent(getActivity(), AboutActivity.class));
             return true;
         }

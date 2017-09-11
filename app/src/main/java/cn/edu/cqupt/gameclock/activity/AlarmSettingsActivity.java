@@ -548,9 +548,9 @@ public final class AlarmSettingsActivity extends AppCompatActivity
     }
 
     private abstract class Setting {
-    public abstract String name();
-    public abstract String value();
-    public abstract SettingType type();
+        public abstract String name();
+        public abstract String value();
+        public abstract SettingType type();
     }
 
     private final class SettingsAdapter extends ArrayAdapter<Setting> {
@@ -724,12 +724,8 @@ public final class AlarmSettingsActivity extends AppCompatActivity
                   return mediaPicker;
 
               case SNOOZE_PICKER:
-                  // This currently imposes snooze times between 1 and 60 minutes,
-                  // which isn't really necessary, but I think the picker is easier
-                  // to use than a free-text field that you have to type numbers into.
                   final CharSequence[] items = new CharSequence[60];
-                  // Note the array index is one-off from the value (the value of 1 is
-                  // at index 0).
+
                   for (int i = 1; i <= 60; ++i) {
                       items[i-1] = Integer.toString(i);
                   }

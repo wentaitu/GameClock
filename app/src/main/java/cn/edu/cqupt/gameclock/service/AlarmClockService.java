@@ -217,15 +217,12 @@ public final class AlarmClockService extends Service {
         }
     }
 
-    // This hack is necessary b/c I released a version of the code with a bunch
-    // of errors in the settings strings.  This should correct them.
     public void fixPersistentSettings() {
     final String badDebugName = "DEBUG_MODE\"";
     final String badNotificationName = "NOTFICATION_ICON";
     final String badLockScreenName = "LOCK_SCREEN\"";
     final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
     Map<String, ?> prefNames = prefs.getAll();
-    // Don't do anything if the bad preferences have already been fixed.
     if (!prefNames.containsKey(badDebugName) &&
         !prefNames.containsKey(badNotificationName) &&
         !prefNames.containsKey(badLockScreenName)) {

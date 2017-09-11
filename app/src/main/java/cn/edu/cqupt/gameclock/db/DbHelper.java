@@ -36,10 +36,8 @@ public final class DbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // Alarm metadata table:
         // |(auto primary) | (0 to 86399) | (boolean) | (string) | (bitmask(7)) |
         // |     _id       |    time      |  enabled  |   name   |     dow      |
-        // time is seconds past midnight.
         db.execSQL("CREATE TABLE " + DB_TABLE_ALARMS + " ("
             + ALARMS_COL__ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + ALARMS_COL_NAME + " TEXT, "
@@ -48,7 +46,6 @@ public final class DbHelper extends SQLiteOpenHelper {
             + ALARMS_COL_ENABLED + " UNSIGNED INTEGER (0, 1))");
         // |(primary) | (string) | (string)  | (1 to 60) | (boolean) | (0 to 100) | (0 to 100) | (0 to 60) |
         // |   id     | tone_url | tone_name |   snooze  |  vibrate  |  vol_start |  vol_end   | vol_time  |
-        // snooze is in minutes.
         db.execSQL("CREATE TABLE " + DB_TABLE_SETTINGS + " ("
             + SETTINGS_COL_ID + " INTEGER PRIMARY KEY, "
             + SETTINGS_COL_TONE_URL + " TEXT,"
